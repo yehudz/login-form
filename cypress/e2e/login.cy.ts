@@ -5,7 +5,9 @@ describe('Login', () => {
     cy.get('[data-test=password-input]').type('password')
     cy.get('[data-test=remember-me]').check()
     cy.get('[data-test=submit-button]').click()
-    // cy.get('[data-test="user-button"]').should('be.visible').click({force: true})
+  })
+
+  it('should sign out', ()=> {
     cy.contains('Open user menu').click()
     cy.contains('Sign out').click()
   })
